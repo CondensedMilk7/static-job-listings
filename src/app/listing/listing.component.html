@@ -1,15 +1,15 @@
 <div class="card">
-  <img src="" alt="company logo" class="company-logo" />
+  <img [src]="company.logo" alt="company logo" class="company-logo" />
   <div class="name-tags">
-    <p class="company-name">Photosnap</p>
-    <p class="new">NEW!</p>
-    <p class="featured">FEATURED</p>
+    <p class="company-name">{{ company.company }}</p>
+    <p class="new" *ngIf="company.new">NEW!</p>
+    <p class="featured" *ngIf="company.featured">FEATURED</p>
   </div>
-  <h4 class="position"></h4>
+  <h4 class="position">{{ company.position }}</h4>
   <div class="details">
-    <p class="posted-at">1d ago</p>
-    <p class="contract">Full Time</p>
-    <p class="location">USA Only</p>
+    <p class="posted-at">{{ company.postedAt }}</p>
+    <p class="contract">{{ company.contract }}</p>
+    <p class="location">{{ company.location }}</p>
   </div>
   <hr />
   <div class="tags">
