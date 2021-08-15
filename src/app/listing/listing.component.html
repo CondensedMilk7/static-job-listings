@@ -2,13 +2,17 @@
   <img [src]="company.logo" alt="company logo" class="company-logo" />
   <div class="name-tags">
     <p class="company-name">{{ company.company }}</p>
-    <p class="new" *ngIf="company.new">NEW!</p>
-    <p class="featured" *ngIf="company.featured">FEATURED</p>
+    <div>
+      <p class="new" *ngIf="company.new">NEW!</p>
+      <p class="featured" *ngIf="company.featured">FEATURED</p>
+    </div>
   </div>
   <h4 class="position">{{ company.position }}</h4>
   <div class="details">
     <p class="posted-at">{{ company.postedAt }}</p>
+    <span class="bullet">•</span>
     <p class="contract">{{ company.contract }}</p>
+    <span class="bullet">•</span>
     <p class="location">{{ company.location }}</p>
   </div>
   <hr />

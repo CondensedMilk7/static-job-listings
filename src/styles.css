@@ -1,1 +1,103 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+  font-family: "Spartan", sans-serif;
+}
+
+:root {
+  /* primary */
+  --desat-dark-cyan: hsl(180, 29%, 50%);
+  /* background */
+  --light-gray-cyan: hsl(180, 52%, 96%);
+  /* filter tablets */
+  --light-gray-cyan2: hsl(180, 31%, 95%);
+  --dark-gray-cyan: hsl(180, 8%, 52%);
+  --very-dark-cyan: hsl(180, 14%, 20%);
+}
+
+body {
+  background: var(--light-gray-cyan);
+}
+
+.img-header {
+  background: var(--desat-dark-cyan);
+}
+
+.img-header img {
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card {
+  width: 90vw;
+  border-left: 4px solid var(--desat-dark-cyan);
+  border-radius: 5px;
+}
+
+.name-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.name-tags p {
+  font-weight: 700;
+}
+
+.name-tags div {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.name-tags div p {
+  margin: 0 8px;
+}
+
+.company-name {
+  color: var(--desat-dark-cyan);
+}
+
+.new {
+  background: var(--desat-dark-cyan);
+  padding: 6px 10px;
+  padding-top: 12px;
+  border-radius: 20px;
+  color: var(--light-gray-cyan);
+}
+
+.featured {
+  background: var(--very-dark-cyan);
+  padding: 6px 10px;
+  padding-top: 12px;
+  border-radius: 20px;
+  color: var(--light-gray-cyan);
+}
+
+.position {
+  font-size: 1.2rem;
+  color: var(--very-dark-cyan);
+}
+
+.details {
+  display: flex;
+  color: var(--dark-gray-cyan);
+}
+
+.bullet {
+  margin: 0 6px;
+  font-weight: bold;
+}
