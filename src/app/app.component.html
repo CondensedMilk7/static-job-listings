@@ -2,5 +2,8 @@
   <img src="../assets/images/bg-header-mobile.svg" alt="" />
 </header>
 <div class="flex-container">
-  <app-listing [company]="data[0]"></app-listing>
+  <app-listing
+    *ngFor="let company of data; let i = index"
+    [company]="data[i]"
+  ></app-listing>
 </div>

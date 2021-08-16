@@ -39,18 +39,39 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  padding-top: 60px;
 }
 
 .card {
   width: 90vw;
-  border-left: 4px solid var(--desat-dark-cyan);
+  background: var(--light-gray-cyan2);
+  border-left: 5px solid var(--desat-dark-cyan);
   border-radius: 5px;
+  padding: 20px;
+  position: relative;
+  min-width: 332px;
+  box-shadow: 5px 6px 15px 1px rgba(0, 0, 0, 0.18);
+  margin: 30px 0;
+}
+
+.company-logo {
+  width: 60px;
+  position: absolute;
+  top: -30px; /* Needs to be half of the image's width*/
+}
+
+.main-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 8rem;
 }
 
 .name-tags {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  /* margin: 6px 0; */
 }
 
 .name-tags p {
@@ -64,7 +85,7 @@ body {
 }
 
 .name-tags div p {
-  margin: 0 8px;
+  margin: 0 4px;
 }
 
 .company-name {
@@ -90,14 +111,36 @@ body {
 .position {
   font-size: 1.2rem;
   color: var(--very-dark-cyan);
+  /* margin: 6px 0; */
 }
 
 .details {
   display: flex;
   color: var(--dark-gray-cyan);
+  /* margin: 6px 0; */
 }
 
 .bullet {
   margin: 0 6px;
   font-weight: bold;
+}
+
+hr {
+  margin: 16px 0;
+  width: 100%;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.tag {
+  color: var(--desat-dark-cyan);
+  font-weight: 700;
+  background: hsl(180, 37%, 91%);
+  padding: 8px;
+  border-radius: 6px;
+  margin: 8px 12px 8px 0;
 }
