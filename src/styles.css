@@ -50,7 +50,7 @@ body {
   padding: 20px;
   position: relative;
   min-width: 332px;
-  box-shadow: 5px 6px 15px 1px rgba(0, 0, 0, 0.18);
+  box-shadow: 5px 6px 20px 1px hsla(180, 29%, 50%, 0.301);
   margin: 30px 0;
 }
 
@@ -111,13 +111,11 @@ body {
 .position {
   font-size: 1.2rem;
   color: var(--very-dark-cyan);
-  /* margin: 6px 0; */
 }
 
 .details {
   display: flex;
   color: var(--dark-gray-cyan);
-  /* margin: 6px 0; */
 }
 
 .bullet {
@@ -128,12 +126,14 @@ body {
 hr {
   margin: 16px 0;
   width: 100%;
+  color: var(--dark-gray-cyan);
+  color: transparent;
+  border-bottom: 1px solid var(--dark-gray-cyan);
 }
 
 .tags {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-between; */
 }
 
 .tag {

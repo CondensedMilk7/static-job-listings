@@ -19,9 +19,14 @@
   </div>
   <hr />
   <div class="tags">
-    <p class="tag">Fullstack</p>
-    <p class="tag">Midweight</p>
-    <p class="tag">Python</p>
-    <p class="tag">React</p>
+    <p class="tag">{{ company.role }}</p>
+    <p class="tag">{{ company.level }}</p>
+    <p class="tag" *ngFor="let language of company.languages; let i = index">
+      {{ company.languages[i] }}
+    </p>
+
+    <p class="tag" *ngFor="let tool of company.tools; let i = index">
+      {{ company.tools[i] }}
+    </p>
   </div>
 </div>

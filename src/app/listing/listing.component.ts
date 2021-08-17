@@ -1,4 +1,3 @@
-import { componentFactoryName } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -8,10 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ListingComponent implements OnInit {
   @Input() company: any;
-  logo = '';
+
   constructor() {}
 
   ngOnInit() {
-    this.logo = this.company.logo;
   }
+
+
 }
