@@ -10,4 +10,14 @@ export class FilterService {
     this.filterList.add(tag);
     this.activeTags.next(this.filterList);
   }
+
+  removeTag(tag: string) {
+    this.filterList.delete(tag);
+    this.activeTags.next(this.filterList);
+  }
+
+  clearFilter() {
+    this.filterList.clear();
+    this.activeTags.next(this.filterList);
+  }
 }

@@ -22,4 +22,12 @@ export class FilterComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.filterSub.unsubscribe();
   }
+
+  onClear() {
+    this.filterService.clearFilter();
+  }
+
+  onRemoveTag(tag: string) {
+    this.filterService.removeTag(tag);
+  }
 }

@@ -1,11 +1,11 @@
 <div class="tags-list">
   <div class="filter-tag" *ngFor="let tag of filterList; let i = index">
     <p class="filter-tag-name">{{ filterList[i] }}</p>
-    <a class="btn-remove"
+    <a class="btn-remove" (click)="onRemoveTag(filterList[i])"
       ><img src="../../assets/images/icon-remove.svg" alt=""
     /></a>
   </div>
 </div>
 <div class="button-div">
-  <a>Clear</a>
+  <a (click)="onClear()">Clear</a>
 </div>
