@@ -20,4 +20,15 @@ export class FilterService {
     this.filterList.clear();
     this.activeTags.next(this.filterList);
   }
+
+  filterData(data: object[]) {
+    const filteredData = new Set();
+    for (let company of data) {
+      // if the companies values (Object.values(company): string[]) includes all the filter tags
+      // push company to filteredData
+    }
+    return [...filteredData];
+  }
+
+  private includesAll(needle: [], haystack: []) {}
 }
