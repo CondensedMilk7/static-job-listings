@@ -1,6 +1,7 @@
 <header class="img-header">
   <img src="../assets/images/bg-header-mobile.svg" alt="" />
 </header>
+<app-filter [tags]="filterList"></app-filter>
 <div class="flex-container">
   <app-listing
     *ngFor="let company of data; let i = index"

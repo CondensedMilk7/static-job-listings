@@ -19,14 +19,22 @@
   </div>
   <hr />
   <div class="tags">
-    <p class="tag">{{ company.role }}</p>
-    <p class="tag">{{ company.level }}</p>
-    <p class="tag" *ngFor="let language of company.languages; let i = index">
+    <a class="tag" (click)="onSelectTag(company.role)">{{ company.role }}</a>
+    <a class="tag" (click)="onSelectTag(company.level)">{{ company.level }}</a>
+    <a
+      class="tag"
+      *ngFor="let language of company.languages; let i = index"
+      (click)="onSelectTag(company.languages[i])"
+    >
       {{ company.languages[i] }}
-    </p>
+    </a>
 
-    <p class="tag" *ngFor="let tool of company.tools; let i = index">
+    <a
+      class="tag"
+      *ngFor="let tool of company.tools; let i = index"
+      (click)="onSelectTag(company.tools[i])"
+    >
       {{ company.tools[i] }}
-    </p>
+    </a>
   </div>
 </div>

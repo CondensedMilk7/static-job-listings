@@ -39,7 +39,36 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 60px;
+  padding-top: 20px;
+}
+app-filter {
+  display: flex;
+  width: 90vw;
+  min-height: 6rem;
+  background: var(--light-gray-cyan2);
+  position: relative;
+  bottom: 40px;
+  margin: auto;
+  border-radius: 6px;
+  box-shadow: 5px 6px 20px 1px hsla(180, 29%, 50%, 0.301);
+}
+
+.tags-list {
+  min-width: 80%;
+}
+
+.button-div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-div a {
+  color: var(--dark-gray-cyan);
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .card {
@@ -143,4 +172,5 @@ hr {
   padding: 8px;
   border-radius: 6px;
   margin: 8px 12px 8px 0;
+  cursor: pointer;
 }

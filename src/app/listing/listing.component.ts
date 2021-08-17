@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FilterService } from '../filter.service';
 
 @Component({
   selector: 'app-listing',
@@ -8,10 +9,11 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ListingComponent implements OnInit {
   @Input() company: any;
 
-  constructor() {}
+  constructor(private filterService: FilterService) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  onSelectTag(tag: string) {
+    this.filterService.addTag(tag);
   }
-
-
 }
