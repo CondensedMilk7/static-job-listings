@@ -15,7 +15,7 @@ export class FilterComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.filterSub = this.filterService.activeTags.subscribe((tags) => {
-      this.filterList = [...tags];
+      if (tags) this.filterList = [...tags];
     });
   }
 

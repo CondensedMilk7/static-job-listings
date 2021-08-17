@@ -14,6 +14,7 @@ export class FilterService {
   removeTag(tag: string) {
     this.filterList.delete(tag);
     this.activeTags.next(this.filterList);
+    this.activeTags.next();
   }
 
   clearFilter() {
@@ -22,13 +23,20 @@ export class FilterService {
   }
 
   filterData(data: object[]) {
-    const filteredData = new Set();
+    const filteredData = [];
     for (let company of data) {
-      // if the companies values (Object.values(company): string[]) includes all the filter tags
+      // if the company's values (Object.values(company): string[]) includes all the filter tags
       // push company to filteredData
+      if (this.includesAll([...this.filterList], Object.values(company))) {
+        filteredData.push(company);
+      }
     }
-    return [...filteredData];
+    return filteredData;
   }
 
-  private includesAll(needle: [], haystack: []) {}
+  private includesAll(needles: any[], haystack: any[]) {
+    return needles.every((val) => {
+      return haystack.indexOf(val) !== -1;
+    });
+  }
 }
