@@ -1,6 +1,5 @@
 import {
   Component,
-  ComponentFactoryResolver,
   OnDestroy,
   OnInit,
 } from '@angular/core';
@@ -15,23 +14,16 @@ import { FilterService } from './filter.service';
 })
 export class AppComponent implements OnInit, OnDestroy {
   data = this.dataService.fethchData();
-  filterListSub = new Subscription();
-  filterList = null;
+  
   constructor(
     private dataService: DataService,
-    private filterService: FilterService
   ) {}
 
   ngOnInit() {
-    this.filterListSub = this.filterService.activeTags.subscribe(
-      (filterList) => {
-        this.filterList = filterList;
-        console.log(this.filterList);
-      }
-    );
+
   }
 
   ngOnDestroy() {
-    this.filterListSub.unsubscribe();
+
   }
 }
