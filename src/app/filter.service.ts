@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { Company } from './data.service';
 
 @Injectable({ providedIn: 'root' })
 export class FilterService {
@@ -22,12 +23,19 @@ export class FilterService {
     this.activeTags.next(this.filterList);
   }
 
-  filterData(data: object[]) {
+  filterData(data: Company[]) {
     const filteredData = [];
     for (let company of data) {
-      // if the company's values (Object.values(company): string[]) includes all the filter tags
+      // tags are defined by these properties only
+      const companyValues = [
+        company.role,
+        company.level,
+        ...company.languages,
+        ...company.tools,
+      ];
+      // if the company's values include all the filter tags
       // push company to filteredData
-      if (this.includesAll([...this.filterList], Object.values(company))) {
+      if (this.includesAll([...this.filterList], companyValues)) {
         filteredData.push(company);
       }
     }
