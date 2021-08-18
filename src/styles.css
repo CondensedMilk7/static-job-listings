@@ -22,10 +22,6 @@ html {
   --very-dark-cyan: hsl(180, 14%, 20%);
 }
 
-body {
-  width: 100vw;
-}
-
 .hidden {
   display: none;
 }
@@ -40,12 +36,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
   height: 20vh;
-}
-
-.img-header img {
-  width: 100%;
 }
 
 .flex-container {
@@ -55,6 +46,7 @@ body {
   justify-content: flex-start;
   padding-top: 20px;
 }
+
 app-filter {
   display: flex;
   width: 90vw;
@@ -99,6 +91,11 @@ app-filter {
   padding: 0.7rem;
 }
 
+.btn-remove:hover,
+.btn-remove:focus {
+  background-color: var(--very-dark-cyan);
+}
+
 .button-div {
   text-align: center;
   display: flex;
@@ -128,7 +125,7 @@ app-filter {
   position: relative;
   min-width: 332px;
   box-shadow: 5px 6px 20px 1px hsla(180, 29%, 50%, 0.301);
-  margin: 30px 0;
+  margin: 30px auto;
 }
 
 .company-logo {
@@ -167,6 +164,8 @@ app-filter {
 
 .company-name {
   color: var(--desat-dark-cyan);
+  text-decoration: none;
+  font-weight: 700;
 }
 
 .new {
@@ -222,7 +221,8 @@ hr {
   cursor: pointer;
 }
 
-.tag:hover {
+.tag:hover,
+.tag:focus {
   background: var(--desat-dark-cyan);
   color: var(--light-gray-cyan);
 }
@@ -234,8 +234,7 @@ hr {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
-    height: 20vh;
+    height: 14vh;
   }
   .card {
     display: flex;

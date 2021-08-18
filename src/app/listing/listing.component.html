@@ -3,7 +3,7 @@
     <img [src]="company.logo" alt="company logo" class="company-logo" />
     <div class="main-info">
       <div class="name-tags">
-        <p class="company-name">{{ company.company }}</p>
+        <a href="#" class="company-name">{{ company.company }}</a>
         <div>
           <p class="new" *ngIf="company.new">NEW!</p>
           <p class="featured" *ngIf="company.featured">FEATURED</p>
@@ -21,7 +21,7 @@
   </div>
   <hr />
   <div class="tags">
-    <a class="tag" (click)="onSelectTag(company.role)">{{ company.role }}</a>
+    <a class="tag" (click)="onSelectTag(company.role)">{{ company.role }} </a>
     <a class="tag" (click)="onSelectTag(company.level)">{{ company.level }}</a>
     <a
       class="tag"

@@ -1,10 +1,6 @@
-import {
-  Component,
-  OnDestroy,
-  OnInit,
-} from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { DataService } from './data.service';
+import { Company, DataService } from './data.service';
 import { FilterService } from './filter.service';
 
 @Component({
@@ -13,7 +9,7 @@ import { FilterService } from './filter.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit, OnDestroy {
-  data = this.dataService.fethchData();
+  data: Company[] = this.dataService.fethchData();
   filterSub = new Subscription();
   filterVisibility = 'hidden';
 

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Company } from '../data.service';
 import { FilterService } from '../filter.service';
 
 @Component({
@@ -7,11 +8,14 @@ import { FilterService } from '../filter.service';
   styleUrls: ['./listing.component.css'],
 })
 export class ListingComponent implements OnInit {
-  @Input() company: any;
+  @Input() company: Company;
+  filterList: any;
 
   constructor(private filterService: FilterService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.filterList = this.filterService.filterList;
+  }
 
   onSelectTag(tag: string) {
     this.filterService.addTag(tag);
