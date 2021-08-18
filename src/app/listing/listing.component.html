@@ -3,7 +3,12 @@
     <img [src]="company.logo" alt="company logo" class="company-logo" />
     <div class="main-info">
       <div class="name-tags">
-        <a href="#" class="company-name">{{ company.company }}</a>
+        <a
+          href="https://github.com/CondensedMilk7"
+          target="_blank"
+          class="company-name"
+          >{{ company.company }}</a
+        >
         <div>
           <p class="new" *ngIf="company.new">NEW!</p>
           <p class="featured" *ngIf="company.featured">FEATURED</p>
