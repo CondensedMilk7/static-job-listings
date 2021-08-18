@@ -26,7 +26,7 @@ export class FilterComponent implements OnInit, OnDestroy {
   onRemoveTag(tag: string) {
     this.filterService.removeTag(tag);
   }
-  
+
   ngOnDestroy() {
     this.filterSub.unsubscribe();
   }

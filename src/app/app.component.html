@@ -1,8 +1,7 @@
 <header class="img-header"></header>
-<app-filter></app-filter>
+<app-filter [style.visibility]="filterVisibility"></app-filter>
 <div class="flex-container">
   <app-listing
-    #filterBox
     *ngFor="let company of data; let i = index"
     [company]="data[i]"
   ></app-listing>

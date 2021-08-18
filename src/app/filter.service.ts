@@ -15,7 +15,6 @@ export class FilterService {
   removeTag(tag: string) {
     this.filterList.delete(tag);
     this.activeTags.next(this.filterList);
-    this.activeTags.next();
   }
 
   clearFilter() {

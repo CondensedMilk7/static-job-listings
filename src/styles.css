@@ -22,6 +22,10 @@ html {
   --very-dark-cyan: hsl(180, 14%, 20%);
 }
 
+body {
+  width: 100vw;
+}
+
 .hidden {
   display: none;
 }
@@ -216,6 +220,11 @@ hr {
   border-radius: 6px;
   margin: 8px 12px 8px 0;
   cursor: pointer;
+}
+
+.tag:hover {
+  background: var(--desat-dark-cyan);
+  color: var(--light-gray-cyan);
 }
 
 @media (min-width: 1000px) {

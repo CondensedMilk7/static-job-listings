@@ -1,4 +1,8 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  OnInit,
+} from '@angular/core';
 import { Subscription } from 'rxjs';
 import { DataService } from './data.service';
 import { FilterService } from './filter.service';
@@ -11,6 +15,7 @@ import { FilterService } from './filter.service';
 export class AppComponent implements OnInit, OnDestroy {
   data = this.dataService.fethchData();
   filterSub = new Subscription();
+  filterVisibility = 'hidden';
 
   constructor(
     private dataService: DataService,
@@ -18,8 +23,15 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.filterSub = this.filterService.activeTags.subscribe(() => {
+    this.filterSub = this.filterService.activeTags.subscribe((filterList) => {
       this.data = this.dataService.fethchData();
+
+      // filterbox visibility
+      if (filterList.size !== 0) {
+        this.filterVisibility = 'visible';
+      } else {
+        this.filterVisibility = 'hidden';
+      }
     });
   }
 
