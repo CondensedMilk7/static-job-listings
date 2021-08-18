@@ -22,12 +22,22 @@ html {
   --very-dark-cyan: hsl(180, 14%, 20%);
 }
 
+.hidden {
+  display: none;
+}
+
 body {
   background: var(--light-gray-cyan);
 }
 
 .img-header {
-  background: var(--desat-dark-cyan);
+  background-image: url("./assets/images/bg-header-mobile.svg");
+  background-color: var(--desat-dark-cyan);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 20vh;
 }
 
 .img-header img {
@@ -93,10 +103,16 @@ app-filter {
   justify-content: center;
 }
 
-.button-div a {
+.btn-clear {
   color: var(--dark-gray-cyan);
   font-weight: 700;
   cursor: pointer;
+}
+
+.btn-clear:hover,
+.btn-clear:focus {
+  color: var(--desat-dark-cyan);
+  text-decoration: underline;
 }
 
 .card {
@@ -121,7 +137,7 @@ app-filter {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 8rem;
+  height: 9rem;
 }
 
 .name-tags {
@@ -181,11 +197,10 @@ app-filter {
 }
 
 hr {
-  margin: 16px 0;
+  margin: 12px 0 16px 0;
   width: 100%;
   color: var(--dark-gray-cyan);
-  color: transparent;
-  border-bottom: 1px solid var(--dark-gray-cyan);
+  /* border-bottom: 1px solid var(--dark-gray-cyan); */
 }
 
 .tags {
@@ -201,4 +216,47 @@ hr {
   border-radius: 6px;
   margin: 8px 12px 8px 0;
   cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  .img-header {
+    background-image: url("./assets/images/bg-header-desktop.svg");
+    background-color: var(--desat-dark-cyan);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 20vh;
+  }
+  .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-and-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .company-logo {
+    position: static;
+    width: inherit;
+    margin: 0 20px 0 10px;
+  }
+
+  hr {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    width: 80vw;
+  }
+
+  app-filter {
+    width: 80vw;
+  }
 }
