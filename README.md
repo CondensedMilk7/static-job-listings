@@ -37,13 +37,7 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>The filter code I'm proud of</h1>
-```
+I had to come up with a filter code that would display only those company listings that contained all the active filter tags. So I had to check if an array strings contained another array of strings and output the list of companies depending on that. This is what I came up with, which I am really proud of:
 
 ```js
 filterData(data: Company[]) {
