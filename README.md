@@ -24,7 +24,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [FrontendMentor](https://condensedmilk7.github.io/static-job-listings/)
-- Live Site URL: [Github Pages](https://condensedmilk7.github.io/static-job-listings/)
+- Live Site URL: [Netlify](https://optimistic-banach-1472a2.netlify.app/)
 
 ## My process
 
