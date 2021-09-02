@@ -6,6 +6,7 @@ This is a solution to the [Job listings with filtering challenge on Frontend Men
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
+  - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [Continued development](#continued-development)
